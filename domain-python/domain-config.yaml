@@ -1,0 +1,3 @@
+domains:
+    - domain: "chat-ai-python"
+      ontology: "chat-ai-0.1.0.owl"

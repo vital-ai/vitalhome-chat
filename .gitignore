@@ -1,0 +1,34 @@
+**/.DS_Store
+
+### VITALSIGNS MANAGED START ###
+
+# Ignore protege catalog xml files
+**/catalog-v*.xml
+/domain-groovy-jar-deployed/
+/domain-json-schema-deployed/
+/domain-ontology-deployed/
+/vital-config/
+/vital-domain/
+/vital-dynamodb/
+/vital-groovy/
+/vital-json-schema/
+/vital-license/
+/vital-lucene/
+/vital-ontology/
+/vital-sparql/
+/vital-sql/
+/vitalflow-inference/
+/vitalflow-integrator/
+/vitalflow-logger/
+/vitalflow-nlp/
+/vitalflow-predict/
+/vitalhadoop/
+/vitalpredict/
+/vitalprime/
+/vitalservice/
+/vitalsigns/
+/vitalutil/
+/aspen/
+/aspen-datascripts/
+### VITALSIGNS MANAGED END   ###
+
