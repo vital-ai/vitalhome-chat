@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='vital-ai-chat',
-    version='0.1.2',
+    version='0.1.4',
     author='Marc Hadfield',
     author_email='marc@vital.ai',
     description='VitalSigns chat domain',
@@ -15,8 +15,10 @@ setup(
     },
     license='Apache License 2.0',
     install_requires=[
-            'vital-ai-haley-kg==0.1.2',
-            'vital-ai-haley-ml==0.1.2',
+            'vital-ai-vitalsigns>=0.1.10',
+            'vital-ai-domain>=0.1.4',
+            'vital-ai-haley-kg>=0.1.4',
+            'vital-ai-haley-ml>=0.1.3',
         ],
     classifiers=[
         "Programming Language :: Python :: 3.10",
