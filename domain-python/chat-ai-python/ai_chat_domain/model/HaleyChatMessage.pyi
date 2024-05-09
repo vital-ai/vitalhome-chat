@@ -20,10 +20,14 @@ class HaleyChatMessage(VITAL_Node):
         chatTimestamp: datetime
         chatVoicePath: str
         haleyChatCreditSourceURI: str
+        haleyChatInteractionModeURI: str
         haleyChatInteractionModelProviderURI: str
+        haleyChatInteractionResponseModeURI: str
         haleyChatInteractionURI: str
         haleyChatMessageCreditUsed: int
         haleyChatMessageType: str
+        haleyChatTextToSpeak: str
+        haleyChatVoiceLanguageTypeURI: str
         messageRequestURI: str
         chatIncrementalMessage: bool
         chatPartialMessage: bool

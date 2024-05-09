@@ -23,3 +23,7 @@ class ResetSubscriptionRequest(HaleyChatCommand):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + ResetSubscriptionRequest._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/chat-ai#ResetSubscriptionRequest'
+

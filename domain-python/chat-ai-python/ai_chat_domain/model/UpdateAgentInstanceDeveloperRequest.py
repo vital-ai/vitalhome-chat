@@ -21,3 +21,7 @@ class UpdateAgentInstanceDeveloperRequest(HaleyChatDeveloperCommand):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + UpdateAgentInstanceDeveloperRequest._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/chat-ai#UpdateAgentInstanceDeveloperRequest'
+

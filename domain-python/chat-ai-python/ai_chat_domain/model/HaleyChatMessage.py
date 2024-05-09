@@ -31,10 +31,14 @@ class HaleyChatMessage(VITAL_Node):
         {'uri': 'http://vital.ai/ontology/chat-ai#hasChatTimestamp', 'prop_class': DateTimeProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasChatVoicePath', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatCreditSourceURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatInteractionModeURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatInteractionModelProviderURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatInteractionResponseModeURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatInteractionURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatMessageCreditUsed', 'prop_class': IntegerProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatMessageType', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatTextToSpeak', 'prop_class': StringProperty}, 
+        {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatVoiceLanguageTypeURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasMessageRequestURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#isChatIncrementalMessage', 'prop_class': BooleanProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#isChatPartialMessage', 'prop_class': BooleanProperty}, 
@@ -48,4 +52,8 @@ class HaleyChatMessage(VITAL_Node):
     @classmethod
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + HaleyChatMessage._allowed_properties
+
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/chat-ai#HaleyChatMessage'
 

@@ -21,3 +21,7 @@ class GetAgentAdminRequest(HaleyChatAgentAdminCommand):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + GetAgentAdminRequest._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/chat-ai#GetAgentAdminRequest'
+

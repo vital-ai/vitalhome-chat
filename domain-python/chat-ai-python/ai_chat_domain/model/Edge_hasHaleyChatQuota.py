@@ -21,3 +21,7 @@ class Edge_hasHaleyChatQuota(VITAL_PeerEdge):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + Edge_hasHaleyChatQuota._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/chat-ai#Edge_hasHaleyChatQuota'
+

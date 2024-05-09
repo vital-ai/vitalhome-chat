@@ -21,3 +21,7 @@ class ProvisionServiceRequest(HaleyChatRequest):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + ProvisionServiceRequest._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/chat-ai#ProvisionServiceRequest'
+

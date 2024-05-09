@@ -21,3 +21,7 @@ class CancelSubscriptionChatRequest(HaleyChatCommand):
     def get_allowed_properties(cls):
         return super().get_allowed_properties() + CancelSubscriptionChatRequest._allowed_properties
 
+    @classmethod
+    def get_class_uri(cls) -> str:
+        return 'http://vital.ai/ontology/chat-ai#CancelSubscriptionChatRequest'
+
