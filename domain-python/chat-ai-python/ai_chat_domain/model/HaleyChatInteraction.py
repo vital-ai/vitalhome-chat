@@ -27,6 +27,7 @@ class HaleyChatInteraction(VITAL_Node):
         {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatInteractionTypeURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatQuotaCreditUsed', 'prop_class': IntegerProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatQuotaStatusURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/chat-ai#isCurrentAssistant', 'prop_class': BooleanProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#isTitleManuallySet', 'prop_class': BooleanProperty}, 
     ]
 

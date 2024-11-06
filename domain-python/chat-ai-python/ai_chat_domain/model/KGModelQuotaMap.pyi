@@ -6,5 +6,3 @@ from vital_ai_vitalsigns.model.VITAL_GraphContainerObject import VITAL_GraphCont
 class KGModelQuotaMap(VITAL_GraphContainerObject):
         haleyChatMessageURI: str
 
-str
-
