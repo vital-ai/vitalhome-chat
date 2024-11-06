@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='vital-ai-chat',
-    version='0.1.8',
+    version='0.1.9',
     author='Marc Hadfield',
     author_email='marc@vital.ai',
     description='VitalSigns chat domain',
@@ -10,6 +10,11 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/vital-ai/vitalhome-chat',
     packages=find_packages(),
+    entry_points={
+        'vitalsigns_packages': [
+            'ai_chat_domain = ai_chat_domain'
+        ]
+    },
     package_data={
          '': ['*.pyi'],
         'ai_chat_domain': ['domain-ontology/*.owl']
