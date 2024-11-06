@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='vital-ai-chat',
-    version='0.1.6',
+    version='0.1.7',
     author='Marc Hadfield',
     author_email='marc@vital.ai',
     description='VitalSigns chat domain',
@@ -12,6 +12,7 @@ setup(
     packages=find_packages(),
     package_data={
          '': ['*.pyi'],
+        'ai_haley_kg_domain': ['domain-ontology/*.owl']
     },
     license='Apache License 2.0',
     install_requires=[
