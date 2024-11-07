@@ -16,6 +16,7 @@ from ai_chat_domain.model.HaleyChatMessage import HaleyChatMessage
 class HaleyChatBotMessage(HaleyChatMessage):
     _allowed_properties = [
         {'uri': 'http://vital.ai/ontology/chat-ai#hasAgentInstallURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/chat-ai#hasAgentVariantURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasChatGeneratedMessage', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasChatIncrementalGeneratedMessage', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasChatPartialGeneratedMessage', 'prop_class': StringProperty}, 

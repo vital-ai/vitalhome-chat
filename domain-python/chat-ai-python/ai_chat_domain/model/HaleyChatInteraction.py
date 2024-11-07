@@ -16,6 +16,7 @@ from vital_ai_vitalsigns.model.VITAL_Node import VITAL_Node
 class HaleyChatInteraction(VITAL_Node):
     _allowed_properties = [
         {'uri': 'http://vital.ai/ontology/chat-ai#hasAgentInstallURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/chat-ai#hasAgentVariantURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasChatUpdateTimestamp', 'prop_class': DateTimeProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatInteractionCategoryURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatInteractionModelProviderURI', 'prop_class': URIProperty}, 

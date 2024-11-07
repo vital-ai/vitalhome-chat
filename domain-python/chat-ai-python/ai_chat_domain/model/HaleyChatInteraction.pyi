@@ -5,6 +5,7 @@ from vital_ai_vitalsigns.model.VITAL_Node import VITAL_Node
 
 class HaleyChatInteraction(VITAL_Node):
         agentInstallURI: str
+        agentVariantURI: str
         chatUpdateTimestamp: datetime
         haleyChatInteractionCategoryURI: str
         haleyChatInteractionModelProviderURI: str
