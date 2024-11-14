@@ -10,19 +10,18 @@ from vital_ai_vitalsigns.model.properties.OtherProperty import OtherProperty
 from vital_ai_vitalsigns.model.properties.StringProperty import StringProperty
 from vital_ai_vitalsigns.model.properties.TruthProperty import TruthProperty
 from vital_ai_vitalsigns.model.properties.URIProperty import URIProperty
-from ai_chat_domain.model.HaleyChatInterAgentCommand import HaleyChatInterAgentCommand
+from com_vitalai_haleyai_question_domain.model.HaleyContainer import HaleyContainer
 
 
-class HaleyChatInterAgentResponse(HaleyChatInterAgentCommand):
+class HaleyInteractionContainer(HaleyContainer):
     _allowed_properties = [
-        {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatInterAgentResponseTypeURI', 'prop_class': URIProperty}, 
     ]
 
     @classmethod
     def get_allowed_properties(cls):
-        return super().get_allowed_properties() + HaleyChatInterAgentResponse._allowed_properties
+        return super().get_allowed_properties() + HaleyInteractionContainer._allowed_properties
 
     @classmethod
     def get_class_uri(cls) -> str:
-        return 'http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponse'
+        return 'http://vital.ai/ontology/chat-ai#HaleyInteractionContainer'
 

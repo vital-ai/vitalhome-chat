@@ -4,4 +4,5 @@ from ai_chat_domain.model.HaleyChatInterAgentCommand import HaleyChatInterAgentC
 
 
 class HaleyChatInterAgentResponse(HaleyChatInterAgentCommand):
-    pass
+        haleyChatInterAgentResponseTypeURI: str
+

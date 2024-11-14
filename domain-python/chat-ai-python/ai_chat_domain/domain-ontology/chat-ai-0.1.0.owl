@@ -599,7 +599,14 @@
     <!-- http://vital.ai/ontology/chat-ai#hasHaleyChatCreditSourceURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/chat-ai#hasHaleyChatCreditSourceURI">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatMessage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatCreditSource"/>
     </owl:ObjectProperty>
     
@@ -689,6 +696,15 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-ml#HaleyIntent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/chat-ai#hasHaleyChatInterAgentResponseTypeURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/chat-ai#hasHaleyChatInterAgentResponseTypeURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponse"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType"/>
     </owl:ObjectProperty>
     
 
@@ -860,6 +876,7 @@
                     <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatQuotaTransaction"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatQuotaTransactionEntry"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatTask"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -888,7 +905,14 @@
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/chat-ai#hasHaleyChatMessageHistoryURI">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatAgentThought"/>
-        <rdfs:range rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatMessage"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -1574,6 +1598,7 @@
                     <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatAgentRequest"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatAgentResponse"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
                 </owl:unionOf>
             </owl:Class>
@@ -1958,6 +1983,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentText"/>
                 </owl:unionOf>
             </owl:Class>
@@ -1970,7 +1996,14 @@
     <!-- http://vital.ai/ontology/chat-ai#hasChatMessageIPAddress -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/chat-ai#hasChatMessageIPAddress">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatMessage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -2024,7 +2057,14 @@
     <!-- http://vital.ai/ontology/chat-ai#hasChatMessageSequence -->
 
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/chat-ai#hasChatMessageSequence">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatMessage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
@@ -6000,6 +6040,14 @@
     
 
 
+    <!-- http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
     <!-- http://vital.ai/ontology/chat-ai#HaleyChatInteraction -->
 
     <owl:Class rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatInteraction">
@@ -6706,6 +6754,14 @@
 
     <owl:Class rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatUserWritingAssistMessage">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatUserMessage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/chat-ai#HaleyInteractionContainer -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/chat-ai#HaleyInteractionContainer">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-question#HaleyContainer"/>
     </owl:Class>
     
 
@@ -9294,6 +9350,62 @@
 
     <owl:NamedIndividual rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatEmailSenderStatus_UNAFFILIATED">
         <rdf:type rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatEmailSenderStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType_STATUS_ERROR -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType_STATUS_ERROR">
+        <rdf:type rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType_STATUS_FAIL -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType_STATUS_FAIL">
+        <rdf:type rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType_STATUS_INPROGRESS -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType_STATUS_INPROGRESS">
+        <rdf:type rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType_STATUS_INTERRUPTED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType_STATUS_INTERRUPTED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType_STATUS_OK -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType_STATUS_OK">
+        <rdf:type rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType_STATUS_PAUSED -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType_STATUS_PAUSED">
+        <rdf:type rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType_STATUS_PENDING -->
+
+    <owl:NamedIndividual rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType_STATUS_PENDING">
+        <rdf:type rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentResponseType"/>
     </owl:NamedIndividual>
     
 
