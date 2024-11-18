@@ -113,6 +113,7 @@
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatAgentThought"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatMessage"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AgentObject"/>
                 </owl:unionOf>
             </owl:Class>
@@ -904,6 +905,7 @@
                     <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatQuotaTransactionEntry"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatTask"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#AIMPMessageContent"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Card"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -965,6 +967,7 @@
                     <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatQuotaTransactionEntry"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatTask"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#KGModelQuotaMap"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#Card"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -1301,7 +1304,14 @@
     <!-- http://vital.ai/ontology/chat-ai#hasHaleyChatReferenceMessageURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/chat-ai#hasHaleyChatReferenceMessageURI">
-        <rdfs:domain rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatAgentThought"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatAgentThought"/>
+                    <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyThoughtContainer"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -6849,6 +6859,14 @@
 
     <owl:Class rdf:about="http://vital.ai/ontology/chat-ai#HaleyResponseQueuePreference">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/chat-ai#HaleyThoughtContainer -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/chat-ai#HaleyThoughtContainer">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley-ai-question#HaleyContainer"/>
     </owl:Class>
     
 
