@@ -961,6 +961,7 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatAgentThought"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatMessageRating"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatQuotaReservation"/>
                     <rdf:Description rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatQuotaTransaction"/>
@@ -1746,6 +1747,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </rdf:Description>
+    
+
+
+    <!-- http://vital.ai/ontology/vital-aimp#hasAIMPMessageContentURI -->
+
+    <rdf:Description rdf:about="http://vital.ai/ontology/vital-aimp#hasAIMPMessageContentURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatAgentThought"/>
     </rdf:Description>
     
 
@@ -3472,6 +3481,15 @@
     <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/chat-ai#hasHaleyChatTextToSpeak">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatMessage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/chat-ai#hasHaleyChatThoughtSequence -->
+
+    <owl:DatatypeProperty rdf:about="http://vital.ai/ontology/chat-ai#hasHaleyChatThoughtSequence">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatAgentThought"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </owl:DatatypeProperty>
     
 

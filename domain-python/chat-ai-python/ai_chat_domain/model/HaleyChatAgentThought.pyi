@@ -8,10 +8,13 @@ class HaleyChatAgentThought(VITAL_Node):
         haleyChatAgentThoughtTypeURI: str
         haleyChatInteractionURI: str
         haleyChatMessageHistoryURI: str
+        haleyChatMessageURI: str
         haleyChatReferenceMessageURI: str
+        haleyChatThoughtSequence: int
         haleyChatThoughtText: str
         haleyChatThoughtTitle: str
         chatIncrementalMessage: bool
         chatPartialMessage: bool
         haleyChatThoughtComplete: bool
+        aIMPMessageContentURI: str
 

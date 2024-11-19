@@ -19,12 +19,15 @@ class HaleyChatAgentThought(VITAL_Node):
         {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatAgentThoughtTypeURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatInteractionURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatMessageHistoryURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatMessageURI', 'prop_class': URIProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatReferenceMessageURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatThoughtSequence', 'prop_class': IntegerProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatThoughtText', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#hasHaleyChatThoughtTitle', 'prop_class': StringProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#isChatIncrementalMessage', 'prop_class': BooleanProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#isChatPartialMessage', 'prop_class': BooleanProperty}, 
         {'uri': 'http://vital.ai/ontology/chat-ai#isHaleyChatThoughtComplete', 'prop_class': BooleanProperty}, 
+        {'uri': 'http://vital.ai/ontology/vital-aimp#hasAIMPMessageContentURI', 'prop_class': URIProperty}, 
     ]
 
     @classmethod
