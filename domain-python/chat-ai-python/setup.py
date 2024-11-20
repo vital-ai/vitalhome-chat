@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='vital-ai-chat',
-    version='0.1.16',
+    version='0.1.17',
     author='Marc Hadfield',
     author_email='marc@vital.ai',
     description='VitalSigns chat domain',

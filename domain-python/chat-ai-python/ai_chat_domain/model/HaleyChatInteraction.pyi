@@ -17,6 +17,7 @@ class HaleyChatInteraction(VITAL_Node):
         haleyChatInteractionTypeURI: str
         haleyChatQuotaCreditUsed: int
         haleyChatQuotaStatusURI: str
+        initiatingMessageURI: str
         currentAssistant: bool
         titleManuallySet: bool
 

@@ -15,6 +15,8 @@ from com_vitalai_haley_domain.model.HaleyRequestMessage import HaleyRequestMessa
 
 class HaleyChatInterAgentCommand(HaleyRequestMessage):
     _allowed_properties = [
+        {'uri': 'http://vital.ai/ontology/chat-ai#hasCallingInteractionURI', 'prop_class': URIProperty}, 
+        {'uri': 'http://vital.ai/ontology/chat-ai#hasRespondingInteractionURI', 'prop_class': URIProperty}, 
     ]
 
     @classmethod
