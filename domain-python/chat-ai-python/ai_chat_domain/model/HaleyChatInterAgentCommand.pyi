@@ -5,5 +5,6 @@ from com_vitalai_haley_domain.model.HaleyRequestMessage import HaleyRequestMessa
 
 class HaleyChatInterAgentCommand(HaleyRequestMessage):
         callingInteractionURI: str
+        haleyChatInterAgentCommandTypeURI: str
         respondingInteractionURI: str
 

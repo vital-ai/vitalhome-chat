@@ -139,6 +139,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/chat-ai#hasCallingInteractionURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/chat-ai#hasCallingInteractionURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentCommand"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatInteraction"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/chat-ai#hasChatMessageRatingTypeURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/chat-ai#hasChatMessageRatingTypeURI">
@@ -724,6 +733,15 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://vital.ai/ontology/haley-ai-ml#HaleyIntent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/chat-ai#hasHaleyChatInterAgentCommandTypeURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/chat-ai#hasHaleyChatInterAgentCommandTypeURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentCommand"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentCommandType"/>
     </owl:ObjectProperty>
     
 
@@ -1599,6 +1617,15 @@
     
 
 
+    <!-- http://vital.ai/ontology/chat-ai#hasInitiatingMessageURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/chat-ai#hasInitiatingMessageURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatInteraction"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AIMPMessage"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://vital.ai/ontology/chat-ai#hasMessageChannelURI -->
 
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/chat-ai#hasMessageChannelURI">
@@ -1678,6 +1705,15 @@
     <owl:ObjectProperty rdf:about="http://vital.ai/ontology/chat-ai#hasRespondingAgentInstallURI">
         <rdfs:domain rdf:resource="http://vital.ai/ontology/chat-ai#Edge_hasAgentChatInteraction"/>
         <rdfs:range rdf:resource="http://vital.ai/ontology/vital-aimp#AgentInstall"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vital.ai/ontology/chat-ai#hasRespondingInteractionURI -->
+
+    <owl:ObjectProperty rdf:about="http://vital.ai/ontology/chat-ai#hasRespondingInteractionURI">
+        <rdfs:domain rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentCommand"/>
+        <rdfs:range rdf:resource="http://vital.ai/ontology/chat-ai#HaleyChatInteraction"/>
     </owl:ObjectProperty>
     
 
@@ -6119,6 +6155,14 @@
     <owl:Class rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentCommand">
         <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/haley#HaleyRequestMessage"/>
         <rdfs:comment>Used for agents that are deployed within the service</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vital.ai/ontology/chat-ai#HaleyChatInterAgentCommandType -->
+
+    <owl:Class rdf:about="http://vital.ai/ontology/chat-ai#HaleyChatInterAgentCommandType">
+        <rdfs:subClassOf rdf:resource="http://vital.ai/ontology/vital-core#VITAL_Node"/>
     </owl:Class>
     
 
